@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: 🧪 Run WDIO tests
-        run: npm run wdio
+        run: npm run test
 
 
       - name: 📦 Upload Logs
