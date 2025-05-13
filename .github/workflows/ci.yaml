@@ -23,12 +23,18 @@ jobs:
         run: npm install
 
       - name: 🧪 Run WDIO tests
-        run: npm run test
+        run: npm run wdio
 
 
-      - name: 📦 Upload Logs
+      - name: 🧩 Merge Mochawesome JSON reports
+        run: npm run report:merge
+
+      - name: 🧾 Generate HTML report
+        run: npm run report:generate
+
+      - name: 📤 Upload HTML Report as Artifact
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-            name: logs
-            path: logs
+          name: mochawesome-report
+          path: mochawesome-report/index.html
