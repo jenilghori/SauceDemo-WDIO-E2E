@@ -132,7 +132,6 @@ export const config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: [
-        'spec'
         ['mochawesome', {
           outputDir: './mochawesome-report',
           outputFileFormat: function(opts) {
