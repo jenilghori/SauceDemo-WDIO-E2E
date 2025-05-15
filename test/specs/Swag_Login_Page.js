@@ -5,7 +5,7 @@ const loginData = JSON.parse(readFileSync('test/testData/loginData.json'))
 //element 
 const ERROR_MSG="Epic sadface: Username and password do not match any user in this service"
 const USERNAME_ERROR_MSG="Epic sadface: Password is required"
-const PASSWORD_ERROR_MSG="Epic sadface: Username is required"
+const PASSWORD_ERROR_MSG="Epic sadface: Username is rezquired"
 
 describe('Swag Lab Login Test', async () => {
 
