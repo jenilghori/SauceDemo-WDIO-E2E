@@ -32,6 +32,12 @@ jobs:
       - name: 🧾 Generate HTML report
         run: npm run report:generate
 
+      - name: 🧪 Debug files
+        run: |
+          echo "=== mochawesome-report ==="
+          ls -la mochawesome-report
+          cat mochawesome-report/output.json
+
       - name: 📤 Upload HTML Report as Artifact
         uses: actions/upload-artifact@v4
         with:
